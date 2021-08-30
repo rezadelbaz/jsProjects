@@ -1,0 +1,58 @@
+{
+                                reqStatus:{
+                                statusCode:200,
+                                message:null
+                                },
+                                result:"{" data":{
+                                "hava":{
+                                "city":"یزد",
+                                "state":"یزد",
+                                "summary":{
+                                "windSpeed":"باد ملایم",
+                                "windSpeedValue":"۲۴",
+                                "windDir":"539",
+                                "humidity":"۷",
+                                "pressure":"۱۰۰۴",
+                                "date":"1502280036417",
+                                "update":"1502276734056",
+                                "temp":"۳۷",
+                                "precipitation":"۰",
+                                "currentSymbol":""
+                                },
+
+
+                                "dayList":[
+                                {
+                                "name":"امروز",
+                                "max":"۳۸",
+                                "min":"۲۳",
+                                "symbol":"wi-day-sunny",
+                                "condition":"باد ملایم",
+                                "items":[
+                                {
+                                "time":"1502280000000",
+                                "temp":"37",
+                                "precipitation":"0",
+                                "windSpeed":"باد ملایم",
+                                "windSpeedValue":"۲۴",
+                                "windDir":"539",
+                                "humidity":"۷",
+                                "symbol":"wi-day-sunny"
+                                }
+                                ]
+                                }
+                                ]
+                                },
+                                "cityList":[
+                                {
+                                "name":"یزد",
+                                "max":"38",
+                                "min":"23",
+                                "symbol":"wi-day-sunny",
+                                "condition":"",
+                                "items":null
+                                }
+                                ]
+                                }
+                                }"
+                                }

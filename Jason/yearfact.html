@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog | JOKER!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="w-50 mx-auto my-5">
+			<h1 class="text-center">Year fact</h1>
+			<hr>
+			<form class='form'>
+				<input name="Year" type="number" class="form-control">
+				<input type="submit" name="submit" value="submit" class="btn btn-success my-3">
+			</form>
+			<div id="app">
+
+			</div>
+		</div>
+	</div>
+	<script>
+
+		let form = document.querySelector('.form')
+		let app = document.querySelector('#app')
+
+		async function factFunction(year){
+			year = year ? year : "random"
+			let fact = await fetch(`http://numbersapi.com/${year}/year`)
+			let data = await fact.text()
+			app.textContent = data
+			app.className = "alert alert-success"
+		} 
+
+		form.addEventListener('submit', e =>{
+			e.preventDefault()
+			factFunction(e.target.Year.value)
+		})
+	</script>
+</body>
+</html>

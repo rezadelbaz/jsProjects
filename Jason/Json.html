@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog | JOKER!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="w-50 mx-auto my-5">
+			<h1 class="text-center">My Blogs</h1>
+			<hr>
+			<div id="app">
+
+
+
+			</div>
+		</div>
+	</div>
+	<script>
+		let post_url = "https://jsonplaceholder.typicode.com/posts/";
+		let user_url = "https://jsonplaceholder.typicode.com/users/";
+		let app = document.querySelector("#app")
+
+		// fetch(url)
+		// 	.then(response => response.json())
+		// 	.then(data=> console.log(data))
+		async function getAthour(url, id){
+			let response = await fetch(url + id)
+			let Athour = await response.json()
+			return Athour
+		}
+
+
+		async function getArticles(url){
+			let response = await fetch(url)
+			let data = await response.json()
+			data.forEach(async post => {
+				post.user = await getAthour(user_url, post.userId)
+				app.innerHTML += `
+					<article>
+						<h1 class="h4">${post.title}</h1>
+						<h4> Athour: ${post.user.name} </h4>
+						<small class="badge badge-success">${post.id}</small>
+						<p>${post.body}</p>
+						<hr>
+					</article>
+				`
+			})
+		}
+		getArticles(post_url)
+	</script>
+</body>
+</html>

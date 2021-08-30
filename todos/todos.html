@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Theme | Modern JS!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="todos.css">
+</head>
+<body>
+	<div class="container">
+		<div class="w-50 mx-auto my-5">
+			<h1 id="header" class="text-center text-light mt-5">Todos</h1>
+
+			<div id="action" class="text-center mb-5">
+				<a class="btn btn-primary" data-action="add">add</a>
+				<a class="btn btn-success" data-action="search">search</a>
+			</div>
+
+			
+			<div id="form-wrapper" class="mb-3">
+
+			</div>
+			<ul class="list-group" id='todos-List'>
+			  <li class="list-group-item"><span>Cras justo odio</span>
+			  	<img src="Media/delete.png" class="float-right"></li>
+			  <li class="list-group-item"><span>Dapibus ac facilisis in</span>
+			  	<img src="Media/delete.png" class="float-right"></li>
+			  <li class="list-group-item"><span>Morbi leo risus</span>
+			  	<img src="Media/delete.png" class="float-right"></li>
+			  <li class="list-group-item"><span>Porta ac consectetur ac</span>
+			  	<img src="Media/delete.png" class="float-right"></li>
+			  <li class="list-group-item"><span>Vestibulum at eros</span>
+			  	<img src="Media/delete.png" class="float-right"></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="counter">
+		<div id="matn">this count: 0 seconds</div>
+		<button class="btncount btn btn-success" data-btn = "start">stop this</button>
+	</div>
+	<video loop autoplay muted><source src="Media/cut.mp4" type="video/mp4"></video>
+	<script src="todos.js"></script>
+</body>
+</html>
